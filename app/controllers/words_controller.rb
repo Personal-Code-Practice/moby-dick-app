@@ -42,6 +42,22 @@ class WordsController < ApplicationController
     # To list a word with its frequency number, we pair them together in a hash.
     frequency = Hash.new(0)
 
+    # Next we loop through the hash to get individual words.
+
+    # unrefined_text_array is an array of strings.
+    unrefined_text_array.each do |words_string|
+      # words_string is a string of many words.
+      words_string.split(/\s+/).each do |word|
+        # word is a string of just one word.
+        # take out punctuations on the words and downcase.
+        pure_alphabet_word = word.gsub(/[[:punct:]]/, '').downcase
+        # increase the frequency of the word each time it appears.
+        frequency[pure_alphabet_word] += 1
+      end
+    end
+
+    ### IMPORTANT: this is not an entirely accurate filter. Words that are hyphenated with other words are now one word, E.g. the string "main-truck—'Ha!" now becomes "maintruckha"
+
 
     ######################## END TEXT FILTERING ##############################
 
