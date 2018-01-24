@@ -1,6 +1,5 @@
 class WordsController < ApplicationController
   def index
-    @words = "Herman Melville's Moby Dick"
 
     ### OBJECTIVE: create a list of the top 100 most frequently occurring words (excluding stop words) paired with the count occurrence of the word in the text of Moby Dick.
 
@@ -78,6 +77,8 @@ class WordsController < ApplicationController
 
     ############ END TEXT TO STOP_WORDS COMPARISON AND SORTING ###############
 
+    @words = top_100_frequent_words
+    
     render "index.html.erb"
   end
 end
