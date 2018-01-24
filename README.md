@@ -17,42 +17,42 @@ Follow the instructions below to get started on using the application.
 What things you need to install the software and how to install them
 
 1. Install Ruby at the command prompt if you haven't yet:
-
+      ```
       $  sudo apt-get install ruby-dev
-
+      ```
    Make sure Ruby is installed on your system:
-
+      ```
       $  ruby -v
-
+      ```
 2. Install Rails at the command prompt if you haven't yet:
-
+      ```
       $  gem install rails
-
+      ```
    Make sure Rails is installed on your system:
-
+      ```
       $  rails -v
-
+      ```
    If you see the Ruby and Rails versions, then you're good to start!
 
 ### Installation
 
 1. Clone the application by running command:
-
+      ```
       $  https://github.com/jasmineimliu/moby-dick-app.git
-
+      ```
 2. Install all dependencies
-
+      ```
       $  bundle install
-
+      ```
 3. Create db and migrate schema
-
+      ```
       $  rails db:create
       $  rails db:migrate
-
+      ```
 4. Now run your application on `http://localhost:3000`
-
+      ```
       $  rails s
-
+      ```
    On the browser, you should now see "Yay! You're on Rails!"
 
 ### Resources
