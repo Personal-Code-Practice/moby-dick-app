@@ -61,5 +61,23 @@ class WordsController < ApplicationController
 
     ######################## END TEXT FILTERING ##############################
 
+
+    ############ BEGIN TEXT TO STOP_WORDS COMPARISON AND SORTING #############
+
+    # Create a new array that will hold the top 100 frequently occurring words.
+    top_100_frequent_words = []
+
+    # For each element of the hash, we want to determine if it's a stop word or if the word is an empty string. If yes, then we delete it.
+    no_stop_word_hash = frequency.each { |k, _| frequency.delete(k) if refined_stop_words.include?(k) || k == "" }
+
+    # Now we sort the clean hash by reversing the order of the first hundred words from ascending to descending.
+    no_stop_word_hash.sort_by { |_k, v| v }.reverse[0..99].each do |k, v|
+      # Here we translate the hash into strings to be shoved in the top_100_frequent_words array.
+      top_100_frequent_words << "#{k}: #{v}"
+    end
+
+    ############ END TEXT TO STOP_WORDS COMPARISON AND SORTING ###############
+
+    render "index.html.erb"
   end
 end
