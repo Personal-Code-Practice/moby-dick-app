@@ -17,39 +17,48 @@ Follow the instructions below to get started on using the application.
 What things you need to install the software and how to install them
 
 1. Install Ruby at the command prompt if you haven't yet:
-```
-$  sudo apt-get install ruby-dev
-```
-Make sure Ruby is installed on your system:
-```
-$  ruby -v
-```
+
+      $  sudo apt-get install ruby-dev
+
+   Make sure Ruby is installed on your system:
+
+      $  ruby -v
+
 2. Install Rails at the command prompt if you haven't yet:
-```
-$ gem install rails
-```
-Make sure Rails is installed on your system:
-```
-$  rails -v
-```
-If you see the Ruby and Rails versions, then you're good to start!
+
+      $  gem install rails
+
+   Make sure Rails is installed on your system:
+
+      $  rails -v
+
+   If you see the Ruby and Rails versions, then you're good to start!
 
 ### Installation
 
 1. Clone the application by running command:
-```
-$ https://github.com/jasmineimliu/moby-dick-app.git
-```
+
+      $  https://github.com/jasmineimliu/moby-dick-app.git
+
 2. Install all dependencies
-```
-$ bundle install
-```
+
+      $  bundle install
+
 3. Create db and migrate schema
-```
-$ rails db:create
-$ rails db:migrate
-```
-4. Now run your application on localhost:3000
-```
-$ rails s
-```
+
+      $  rails db:create
+      $  rails db:migrate
+
+4. Now run your application on `http://localhost:3000`
+
+      $  rails s
+
+   On the browser, you should now see "Yay! You're on Rails!"
+
+### Resources
+
+For additional information on Ruby, Rails and postgresql, you may find the following resources helpful:
+   * [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html)
+   * [Ruby on Rails Guides](http://guides.rubyonrails.org)
+   * [How To Setup Ruby on Rails with PostgreSQL](https://www.digitalocean.com/community/tutorials/how-to-setup-ruby-on-rails-with-postgres)
+
