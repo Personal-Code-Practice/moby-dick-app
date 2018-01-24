@@ -21,7 +21,7 @@ class WordsController < ApplicationController
     end
     p 'X' * 50
 
-    
+
     ###################### BEGIN STOP_WORDS FILTERING ########################
 
     # refine the stop words array so that we only have a list of words.
@@ -37,6 +37,13 @@ class WordsController < ApplicationController
     ###################### END STOP_WORDS FILTERING ##########################
 
 
+    ######################## BEGIN TEXT FILTERING ############################
+
+    # To list a word with its frequency number, we pair them together in a hash.
+    frequency = Hash.new(0)
+
+
+    ######################## END TEXT FILTERING ##############################
 
   end
 end
