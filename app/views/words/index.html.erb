@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <title>100 Most Frequently Occurring Words from Moby Dick</title>
   </head>
   <body>
-    <%= @words %>
+    <h2>100 Most Frequently Occurring Words from Moby Dick</h2>
+    <h3>Words in list: <%= @words.count %></h3>
+    <% @words.each do |word| %>
+      <p><%= word %></p>
+    <% end %>
   </body>
 </html>
